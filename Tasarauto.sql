@@ -1,0 +1,14 @@
+create database hlink;
+
+create table customers (
+	id int AUTO_INCREMENT PRIMARY KEY,
+	date date DEFAULT current_timestamp (),
+	first_name varchar(30) not null,
+	surname varchar(30) not null,
+	email varchar(320) not null unique,
+	message varchar(500) null
+)
+select * from customers
+select email from customers
+select * from customers where email = 'teste@teste'
+drop table customers
